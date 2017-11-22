@@ -1,5 +1,12 @@
 <?php
-$pdo = new PDO('mysql:host=localhost;dbname=ijdb;
-charset=utf8', 'ijdbuser', 'mypassword');
-$pdo->setAttribute(PDO::ATTR_ERRMODE,
-PDO::ERRMODE_EXCEPTION);
+
+$config = require 'config.php';
+
+$config = $config['database'];
+
+$pdo = new PDO(
+  $config['connection'] . ';dbname=' . $config['name'],
+        $config['username'],
+        $config['password'],
+        $config['options']
+);
