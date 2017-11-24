@@ -3,8 +3,16 @@
   padding: 0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: Arial, Helvetica, Sans-serif;
+  position: relative;
+  padding-bottom: 50px;
+  min-height: 100%;
+  background-color: #f7f7f7;
 }
 
 header {
@@ -50,8 +58,6 @@ nav li {
 
 main {
   overflow: auto;
-  min-height: 30vh;
-  background-color: #f7f7f7;
   width: 1000px;
   margin: auto;
   box-shadow: -1000px 0 0 #f7f7f7, 1000px 0 0 #f7f7f7;
@@ -62,6 +68,10 @@ footer {
   padding: 1em;
   background-color: #ffc9a7;
   font-size: 0.8em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 p {
