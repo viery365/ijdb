@@ -26,7 +26,7 @@ class Markdown {
 		$text = str_replace("\r", "\n", $text);
 
 		// Paragraphs
-		$text = '<p>' . str_replace("\n\n", '</p><p>', $text) . '</p>';
+		$text = '<p class="joke-text">' . str_replace("\n\n", '</p><p>', $text) . '</p>';
 		// Line breaks
 		$text = str_replace("\n", '<br>', $text);
 

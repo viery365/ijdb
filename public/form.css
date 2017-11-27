@@ -19,7 +19,7 @@ label {
   margin: 0;
 }
 
-input[type="submit"] {
+input[type="submit"]:not(.delete-joke) {
   margin-left: 15em;
   width: auto;
   padding: 0.5em 1em;

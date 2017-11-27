@@ -45,15 +45,22 @@ nav a:hover {
 }
 
 nav ul {
-  display: table;
-  width: 1000px;
-  margin: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 nav li {
-  display: table-cell;
+  display: inline;
   text-align: center;
   padding: 1em;
+  margin-left: 5%;
+}
+
+nav li a {
+  display: inline-block;
+  padding: 10px;
 }
 
 main {
@@ -72,10 +79,6 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-}
-
-p {
-  margin-bottom: 1em;
 }
 
 body {
@@ -99,36 +102,10 @@ label {
   margin: 0;
 }
 
-input[type="submit"] {
-  margin-left: 15em;
-  width: auto;
-  padding: 0.5em 1em;
-  clear: both;
-  font-size: 1em;
-}
-
 form {
   overflow: auto;
   clear: both;
   display: block;
-}
-
-blockquote {
-  display: table;
-  margin-bottom: 1em;
-  border-bottom: 1px solid #ccc;
-  padding: 0.5em;
-}
-
-blockquote p {
-  display: table-cell;
-  width: 70%;
-  vertical-align: top;
-}
-
-blockquote form {
-  display: table-cell;
-  width: 10%;
 }
 
 .errors {
@@ -159,18 +136,6 @@ input[type="checkbox"] + label {
   clear: right;
 }
 
-.jokelist {
-  display: table;
-}
-
-.categories {
-  display: table-cell;
-  width: 20%;
-  background-color: #333;
-  padding: 1em;
-  list-style-type: none;
-}
-
 .categories a {
   color: white;
   text-decoration: none;
@@ -180,9 +145,25 @@ input[type="checkbox"] + label {
   margin-bottom: 1em;
 }
 
-.jokelist .jokes {
-  display: table-cell;
+.jokelist {
+  overflow: hidden;
+}
+
+.jokes {
   padding: 1em;
+  width: 74%;
+}
+
+.jokes ul {
+  list-style-type: none;
+  margin-top: 30px;
+}
+
+.jokes li {
+  min-height: 85px;
+  margin-bottom: 30px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .currentpage:before {
@@ -191,4 +172,55 @@ input[type="checkbox"] + label {
 
 .currentpage:after {
   content: "]";
+}
+
+#categories {
+  width: 20%;
+  background-color: #333;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+#categories ul {
+  list-style-type: none;
+}
+
+.info {
+  width: 35%;
+  float: left;
+}
+
+.text {
+  width: 70%;
+}
+
+.column {
+  float: left;
+  padding-bottom: 100%;
+  margin-bottom: -100%;
+}
+
+.inner-jokes {
+  margin: 0;
+}
+
+.joke {
+  float: left;
+  width: 65%;
+}
+
+#pagination {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  text-align: center;
+}
+
+.joke-text {
+  padding-right: 2%;
+  padding-left: 2%;
+}
+
+input[type="submit"].delete-joke {
+  width: auto;
+  font-size: 1em;
 }
