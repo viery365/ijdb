@@ -34,7 +34,7 @@ namespace Ninja;
      // but the resulting HTML will be stored in the buffer
      // rather than sent to the browser.
      include __DIR__ . '/../../templates/' . $templateFileName;
-     // Read the contents of the buffer return it
+     // Read the contents of the buffer and return it
      return ob_get_clean();
    }
 
